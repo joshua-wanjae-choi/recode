@@ -1,0 +1,8 @@
+# install gensim
+pip install --upgrade gensim
+
+# install glove
+pip install glove-python
+
+# install fasttext
+pip install fasttext

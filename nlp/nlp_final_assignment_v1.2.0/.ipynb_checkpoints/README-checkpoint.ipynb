@@ -1,0 +1,90 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# nlp_final_assignment_v1.2\n",
+    "\n",
+    "## 0. 설명\n",
+    "Word Embedding 방법들(fastext, glove, word2vec)의 성능 평가  \n",
+    "5개사 신문들(조선, 동아, 한겨례, 중앙, 경향)로 학습진행(신문 파일은 미첨부)  \n",
+    "\n",
+    "## 1. 환경\n",
+    "python 3.6  \n",
+    "관련 package 설치법은 \"package\" 설치 폴더를 참고  \n",
+    "\n",
+    "## 2. 파일구조\n",
+    "```\n",
+    " data(dir)  \n",
+    " |  \n",
+    " |___news(dir)  \n",
+    " |   |  \n",
+    " |   |___chosun_full.txt, donga_full.txt, hani_full.txt, joongang_full.txt,\n",
+    " |        kh_full.txt  \n",
+    " |  \n",
+    " |  \n",
+    " model(dir)  \n",
+    " |   |  \n",
+    " |   |___fasttext(dir)  \n",
+    " |   |___glove   (dir)  \n",
+    " |   |___word2vec(dir)  \n",
+    " |  \n",
+    " |  \n",
+    " output(dir)  \n",
+    " |  \n",
+    " |  \n",
+    " package 설치(dir)  \n",
+    " |   |  \n",
+    " |   |___konlpy_mecab_설치(line_encoding_ubuntu).txt, model설치.txt  \n",
+    " |  \n",
+    " |___train_model.sh, load_model.sh, save_whole.sentences.py, train_model.py  \n",
+    "```\n",
+    "\n",
+    "\n",
+    "## 3. 실행\n",
+    "최초 시작 시, 터미널에서 bash train_model.sh 입력  \n",
+    "동일 모델 재시작 시, 터미널에서 bash load_model.sh 입력  \n",
+    "\n",
+    "\n",
+    "__*hyper-parameter를 바꿔가며 model을 훈련하고 싶은 경우__  \n",
+    "bash train_model.sh에 적힌  \n",
+    " `python train_model.py --size 100 200 300 --iter 5 10 --sg 0 1`  \n",
+    "에서 원하는 hyper-parameter 뒤에 숫자를 바꿔주면 됨(여러개 입력 시, 한 칸 띄어쓰기 후 입력)  \n",
+    "예를 들면, size를 바꾸고 싶다면 --size 100 300 500 로 바꿔줌  \n",
+    "\n",
+    "\n",
+    "\n",
+    "## 4. 결과\n",
+    "output은 output 폴더 내에 csv 파일로 저장됨  \n",
+    "csv를 열 수 있는 응용프로그램으로 열어서 확인  \n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "autotrading",
+   "language": "python",
+   "name": "autotrading"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.2"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
